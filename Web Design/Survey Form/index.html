@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Survey Page</title>
+
+        <link href="style.css" type="text/css" rel="stylesheet" media="all" />
+
+        <script
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+            defer
+        ></script>
+        <script type="text/javascript">
+            const projectName = "survey-form";
+            localStorage.setItem("example_project", "Survey Form");
+        </script>
+        
+    </head>
+
+    <body>
+        <main>
+            <h1 id="title">Survey Form</h1>
+
+            <form id="survey-form">
+
+                <div id="div-form">
+                    <div id="column1">
+                        <div class="column-content">
+                            <div class="spacing">
+                                <p id="description">
+                                    This is a survey for how good or bad was designed  
+                                    <a href="https://bogdannitica99.github.io/freeCodeCamp/Web%20Design/Tribute%20Page/"> this page!</a> <br>
+                                    This survey will take two - three minutes to be done.
+                                </p>
+                            </div>
+
+                            <div class="spacing">
+                                <label id="name-label" for="name">Name:</label><br>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+                                <label id="email-label" for="email">Email:</label><br>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+                            </div>
+
+                            <div class="spacing">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label><br>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label><br>
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+
+                            <div class="spacing">
+                                <p>From what device did you saw the page?</p>
+                                <select id="dropdown" name="devices">
+                                    <option value="Desktop">Desktop</option>
+                                    <option value="Laptop">Laptop</option>
+                                    <option value="Phone">Phone</option>
+                                    <option value="Tv">TV</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="column2">
+                        <div class="column-content">
+                            <div class="spacing">
+                                <label id="number-label" for="overall_score">Give a score to the page:</label><br>
+                                <input type="number" id="number" name="overall_score" min="1" max="10" placeholder="Enter a score between 1-10"><br>
+                            </div>
+
+                            <div class="spacing">
+                                <label id="number-label" for="responsive_score">Give a score for how responsive do you think the page was:</label><br>
+                                <input type="number" id="number" name="responsive_score" min="1" max="10" placeholder="Enter a score between 1-10"><br>
+                            </div>
+
+                            <div class="spacing">
+                                <label id="number-label" for="content_score">Give a score for how good the content was:</label><br>
+                                <input type="number" id="number" name="content_score" min="1" max="10" placeholder="Enter a score between 1-10"><br>
+                            </div>
+
+                            <div class="spacing">
+                                <label for="feedback_text">Write your feedback about the page:</label>
+                                <textarea id="feedback_text" rows="4" cols="50"></textarea>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="column3">
+                        <div class="column-content">
+                            <div class="spacing">
+                                <p>What are your favorites music genres</p>
+                                <input type="checkbox" id="rock" name="rock" value="Rock">
+                                <label for="Rock"> Rock</label><br>
+                                <input type="checkbox" id="pop" name="pop" value="Pop">
+                                <label for="Pop"> Pop</label><br>
+                                <input type="checkbox" id="jazz" name="jazz" value="Jazz">
+                                <label for="Jazz"> Jazz</label><br>
+                                <input type="checkbox" id="classic" name="classic" value="Classic">
+                                <label for="Classic"> Classic</label><br>
+                            </div>
+
+                            <div class="spacing">
+                                <p>Did you heard about Savatage before?</p>
+                                <input type="radio" id="yes" name="question1" value="yes">
+                                <label for="yes">Yes</label><br>
+
+                                <input type="radio" id="no" name="question1" value="no">
+                                <label for="no">No</label><br>
+                            </div>
+
+                            <div class="spacing">
+                                <p>Did you try any Savatage song?</p>
+                                <input type="radio" id="yes" name="question2" value="yes">
+                                <label for="yes">Yes</label><br>
+
+                                <input type="radio" id="no" name="question2" value="no">
+                                <label for="no">No</label><br>
+                            </div>
+
+                            <div class="spacing">
+                                <label id="name-label" for="name">Write your favorite song from them(if you have one :D ofc):</label><br>
+                                <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+                            </div>
+
+                            <div class="spacing">
+                                <input id="submit" type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+    </body>
+
+</html>
