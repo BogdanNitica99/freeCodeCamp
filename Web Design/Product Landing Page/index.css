@@ -63,3 +63,9 @@ table td:nth-child(3) {
     background-color: purple;
   }
 }
+
+@media (max-width: 360px) {
+  #nav-bar li {
+    flex-basis: 100%;
+  }
+}
