@@ -19,5 +19,253 @@
     </script>
   </head>
 
-  <body></body>
+  <body>
+    <main id="main-doc">
+      <h1>Git</h1>
+
+      <div id="navigation">
+        <header>Navigation</header>
+        <hr />
+        <p>
+          <li><a href="#About">About</a></li>
+          <li>
+            <a href="#Characteristics">Characteristics</a>
+          </li>
+          <li><a href="#Commands">Commands</a></li>
+          <li>
+            <a href="#Implementations">Implementations</a>
+          </li>
+          <li><a href="#Security">Security</a></li>
+          <li><a href="#Reference">Reference</a></li>
+        </p>
+      </div>
+
+      <section class="main-section" id="About">
+        <header>About</header>
+        <hr />
+        <p>
+          Git is software for tracking changes in any set of files, usually used
+          for coordinating work among programmers collaboratively developing
+          source code during software development. Its goals include speed, data
+          integrity, and support for distributed, non-linear workflows
+          (thousands of parallel branches running on different systems). Git was
+          created by Linus Torvalds in 2005 for development of the Linux kernel,
+          with other kernel developers contributing to its initial development.
+          Since 2005, Junio Hamano has been the core maintainer.
+        </p>
+        <p>
+          As with most other distributed version control systems, and unlike
+          most client–server systems, every Git directory on every computer is a
+          full-fledged repository with complete history and full
+          version-tracking abilities, independent of network access or a central
+          server. Git is free and open-source software distributed under GNU
+          General Public License Version 2.
+        </p>
+      </section>
+      <section class="main-section" id="Characteristics">
+        <header>Characteristics</header>
+        <hr />
+        <p>
+          Git's design is a synthesis of Torvalds's experience with Linux in
+          maintaining a large distributed development project, along with his
+          intimate knowledge of file-system performance gained from the same
+          project and the urgent need to produce a working system in short
+          order. These influences led to the following implementation choices:
+        </p>
+        <li>Strong support for non-linear development</li>
+        <li>Distributed development</li>
+        <li>Compatibility with existent systems and protocols</li>
+        <li>Efficient handling of large projects</li>
+        <li>Cryptographic authentication of history</li>
+      </section>
+      <section class="main-section" id="Commands">
+        <header>Commands</header>
+        <hr />
+        <h4>Getting and Creating Projects</h4>
+        <div class="code-style">
+          <p>
+            git-init - Create an empty Git repository or reinitialize an
+            existing one
+          </p>
+          <code
+            >git-init [-q | --quiet] [--bare]
+            [--template=&#60;template_directory&#62;] <br />
+            [--separate-git-dir &#60;git dir&#62;]
+            [--object-format=&#60;format&#62;] <br />
+            [-b &#60;branch-name &#62; | --initial-branch=&#60;branch-name
+            &#62;] <br />
+            [--shared[=&#60;permissions&#62;]] [directory]
+          </code>
+        </div>
+        <div class="code-style">
+          <p>git-clone - Clone a repository into a new directory</p>
+          <code
+            >git clone [--template= &#60;template_directory&#62;] <br />
+            [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror] <br />
+            [-o &#60;name&#62;] [-b &#60;name&#62;] [-u &#60;upload-pack&#62;]
+            [--reference &#60;repository&#62;]
+          </code>
+        </div>
+        <h4>Basic Snapshotting</h4>
+        <div class="code-style">
+          <p>git-add - Add file contents to the index</p>
+          <code
+            >git add [--verbose | -v] [--dry-run | -n] [--force | -f]
+            [--interactive | -i] [--patch | -p] <br />
+            [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]
+          </code>
+        </div>
+        <div class="code-style">
+          <p>git-commit - Record changes to the repository</p>
+          <code
+            >git commit [-a | --interactive | --patch] [-s] [-v]
+            [-u&#60;mode&#62;] [--amend] <br />
+            [--dry-run] [(-c | -C | --fixup | --squash) &#60;commit&#62;] <br />
+            [-F &#60;file&#62; | -m &#60;msg&#62;] [--reset-author]
+            [--allow-empty] <br />
+            [--allow-empty-message] [--no-verify] [-e]
+            [--author=&#60;author&#62;]
+          </code>
+        </div>
+        <div class="code-style">
+          <p>git-branch - List, create, or delete branches</p>
+          <code
+            >git branch [--color[=&#60;when&#62;] | --no-color] [--show-current]
+            [-v [--abbrev=&#60;n&#62; | --no-abbrev]] <br />
+            [--column[=&#60;options&#62;] | --no-column] [--sort=&#60;key&#62;]
+            <br />
+            [--merged [&#60;commit&#62;]] [--no-merged [&#60;commit&#62;]]
+            <br />
+            [--contains [&#60;commit&#62;]] [--no-contains [&#60;commit&#62;]]
+          </code>
+        </div>
+        <div class="code-style">
+          <p>git-checkout - Switch branches or restore working tree files</p>
+          <code
+            >git checkout [-q] [-f] [-m] [&#60;branch&#62;] <br />
+            git checkout [-q] [-f] [-m] --detach [&#60;branch&#62;] <br />
+            git checkout [-q] [-f] [-m] [--detach] &#60;commit&#62;
+          </code>
+        </div>
+      </section>
+      <section class="main-section" id="Implementations">
+        <header>Implementations</header>
+        <hr />
+        <p>
+          Git (the main implementation in C) is primarily developed on Linux,
+          although it also supports most major operating systems, including BSD,
+          Solaris, macOS, and Windows. The first Windows port of Git was
+          primarily a Linux-emulation framework that hosts the Linux version.
+          Installing Git under Windows creates a similarly named Program Files
+          directory containing the Mingw-w64 port of the GNU Compiler
+          Collection, Perl 5, MSYS2 (itself a fork of Cygwin, a Unix-like
+          emulation environment for Windows) and various other Windows ports or
+          emulations of Linux utilities and libraries. Currently, native Windows
+          builds of Git are distributed as 32- and 64-bit installers. The git
+          official website currently maintains a build of Git for Windows, still
+          using the MSYS2 environment.
+        </p>
+
+        <p>
+          The JGit implementation of Git is a pure Java software library,
+          designed to be embedded in any Java application. JGit is used in the
+          Gerrit code-review tool, and in EGit, a Git client for the Eclipse
+          IDE.
+        </p>
+
+        <p>
+          Go-git is an open-source implementation of Git written in pure Go. It
+          is currently used for backing projects as a SQL interface for Git code
+          repositories and providing encryption for Git. The Dulwich
+          implementation of Git is a pure Python software component for Python
+          2.7, 3.4 and 3.5
+        </p>
+
+        <p>
+          The libgit2 implementation of Git is an ANSI C software library with
+          no other dependencies, which can be built on multiple platforms,
+          including Windows, Linux, macOS, and BSD. It has bindings for many
+          programming languages, including Ruby, Python, and Haskell.
+        </p>
+      </section>
+      <section class="main-section" id="Security">
+        <header>Security</header>
+        <hr />
+        <p>
+          Git does not provide access-control mechanisms, but was designed for
+          operation with other tools that specialize in access control.
+        </p>
+        <p>
+          On 17 December 2014, an exploit was found affecting the Windows and
+          macOS versions of the Git client. An attacker could perform arbitrary
+          code execution on a target computer with Git installed by creating a
+          malicious Git tree (directory) named .git (a directory in Git
+          repositories that stores all the data of the repository) in a
+          different case (such as .GIT or .Git, needed because Git does not
+          allow the all-lowercase version of .git to be created manually) with
+          malicious files in the .git/hooks subdirectory (a folder with
+          executable files that Git runs) on a repository that the attacker made
+          or on a repository that the attacker can modify. If a Windows or Mac
+          user pulls (downloads) a version of the repository with the malicious
+          directory, then switches to that directory, the .git directory will be
+          overwritten (due to the case-insensitive trait of the Windows and Mac
+          filesystems) and the malicious executable files in .git/hooks may be
+          run, which results in the attacker's commands being executed. An
+          attacker could also modify the .git/config configuration file, which
+          allows the attacker to create malicious Git aliases (aliases for Git
+          commands or external commands) or modify extant aliases to execute
+          malicious commands when run. The vulnerability was patched in version
+          2.2.1 of Git, released on 17 December 2014, and announced the next
+          day.
+        </p>
+        <p>
+          Git version 2.6.1, released on 29 September 2015, contained a patch
+          for a security vulnerability (CVE-2015-7545) that allowed arbitrary
+          code execution. The vulnerability was exploitable if an attacker could
+          convince a victim to clone a specific URL, as the arbitrary commands
+          were embedded in the URL itself. An attacker could use the exploit via
+          a man-in-the-middle attack if the connection was unencrypted, as they
+          could redirect the user to a URL of their choice. Recursive clones
+          were also vulnerable, since they allowed the controller of a
+          repository to specify arbitrary URLs via the gitmodules file.
+        </p>
+        <p>
+          Git uses SHA-1 hashes internally. Linus Torvalds has responded that
+          the hash was mostly to guard against accidental corruption, and the
+          security a cryptographically secure hash gives was just an accidental
+          side effect, with the main security being signing elsewhere. Since a
+          demonstration of the SHAttered attack against git in 2017, git was
+          modified to use a SHA-1 variant resistant to this attack. A plan for
+          hash function transition is being written since February 2020.
+        </p>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <hr />
+        <p>
+          All the documentation in this page is taken from
+          <a href="https://en.wikipedia.org/wiki/Git">Wikipedia</a> and
+          <a href="https://git-scm.com/">Official Docs</a>. If you want to find
+          out more about Git feel free to use both this resources.
+        </p>
+      </section>
+
+      <nav id="navbar">
+        <header>Git</header>
+        <a class="nav-link" href="#About">About</a>
+        <a class="nav-link" href="#Characteristics">Characteristics</a>
+        <a class="nav-link" href="#Commands">Commands</a>
+        <a class="nav-link" href="#Implementations">Implementations</a>
+        <a class="nav-link" href="#Security">Security</a>
+        <a class="nav-link" href="#Reference">Reference</a>
+      </nav>
+    </main>
+  </body>
 </html>
+
+<!--
+
+User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+
+User Story #15: My Technical Documentation page should use at least one media query. -->

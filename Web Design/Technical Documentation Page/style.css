@@ -3,3 +3,112 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+#main-doc {
+  padding-top: 20px;
+  margin-left: 220px; /* Same as the width of the sidebar */
+}
+
+.main-section {
+  padding-top: 20px;
+}
+
+#navigation {
+  display: none;
+}
+
+header {
+  font-size: 27px;
+  letter-spacing: 1.5px;
+}
+
+p {
+  padding-top: 5px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+}
+
+li {
+  padding-left: 15px;
+}
+
+code {
+  background-color: gainsboro;
+}
+
+#Commands > h4 {
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-bottom: 0px;
+}
+
+#Commands > p {
+  padding-top: 7px;
+  padding-bottom: 0px;
+}
+
+.code-style {
+  padding-left: 27px;
+}
+
+.code-style > p {
+  padding-left: 0px;
+}
+
+#navbar {
+  height: 100%;
+  width: 215px;
+  position: fixed; /* Stay in place on scroll */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(102, 98, 98);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  padding-left: 5px;
+}
+
+#navbar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #aaaaaa;
+  display: block;
+}
+
+#navbar a:hover {
+  color: #f1f1f1;
+}
+
+#Reference a {
+  text-decoration: none;
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  #main-doc {
+    margin-left: 0px;
+  }
+
+  #navigation {
+    display: block;
+    padding-top: 20px;
+  }
+
+  #navigation a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  #navigation a:hover {
+    color: #707070;
+  }
+
+  #navigation li {
+    list-style-type: none;
+  }
+
+  #navbar {
+    display: none;
+  }
+}
