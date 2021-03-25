@@ -2,6 +2,8 @@
 
 ## Responsive Web Design
 
+These projects show the learning slope I took by learning HTML and CSS from freeCodeCamp. I prefer to keep them as they are because I like to see the progress I have made over time.
+
 - Tribute Page - [Page](https://bogdannitica99.github.io/freeCodeCamp/Web%20Design/Tribute%20Page/)
 - Survey Form - [Page](https://bogdannitica99.github.io/freeCodeCamp/Web%20Design/Survey%20Form/)
 - Product Landing Page - [Page](https://bogdannitica99.github.io/freeCodeCamp/Web%20Design/Product%20Landing%20Page/)
